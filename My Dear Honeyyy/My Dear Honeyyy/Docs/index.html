@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoş geldin</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/stars.js" defer></script>
+</head>
+<body>
+    <button id="music-btn" style="font-size:1.2rem; padding:10px 24px; border-radius:12px; background:#ffd740; color:#b85c00; border:none; cursor:pointer; margin:40px auto; display:block;">
+        🎵 Şarkımız başlasın mı?
+    </button>
+    <audio id="bgmusic" loop>
+        <source src="audio/MECBURUM.mp3" type="audio/mpeg">
+    </audio>
+
+    <h1>Hoş geldin Bal Pettteğim 💖</h1>
+    <button id="start-btn">Hazır mısın yolculuğumuza?</button>
+    <div id="iframe-container"></div>
+
+    <script>
+    document.getElementById('music-btn').onclick = function() {
+        var audio = document.getElementById('bgmusic');
+        audio.volume = 0.3;
+        audio.play();
+        this.style.display = 'none';
+    };
+    document.getElementById('start-btn').onclick = function() {
+        document.getElementById('iframe-container').innerHTML =
+          '<iframe src="orta.html" style="width:100vw; height:70vh; border:none; display:block; margin:auto;"></iframe>';
+        this.style.display = 'none';
+    };
+    </script>
+</body>
+</html>
